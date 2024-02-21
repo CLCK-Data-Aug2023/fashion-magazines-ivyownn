@@ -8,3 +8,6 @@ JOIN subscriptions
 WHERE orders.order_status = 'unpaid'
     AND subscriptions.description = 'Fashion Magazine'
 GROUP BY Customer;
+
+
+--ok
