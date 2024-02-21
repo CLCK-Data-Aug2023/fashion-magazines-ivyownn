@@ -76,9 +76,9 @@ def main() -> None:
         exit(1)
     
     if conn is not None:
-        movies = pd.read_sql(sql, conn)
+        fashion_magazines = pd.read_sql(sql, conn)
 
-        if len(movies) == 0:
+        if len(fashion_magazines) == 0:
             print("Error: query did not return any results")
             exit(1)
         csv_dir = os.path.dirname(path_to_csv)
@@ -86,7 +86,7 @@ def main() -> None:
         if not os.path.exists(csv_dir):
             os.makedirs(csv_dir)
 
-        movies.to_csv(path_to_csv, index=False)
+        fashion_magazines.to_csv(path_to_csv, index=False)
 
     else:
         print("Error: Could not connect to database.")
